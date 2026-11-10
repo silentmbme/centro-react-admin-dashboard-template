@@ -1,0 +1,50 @@
+{
+  "source": "http://127.0.0.1:3000",
+  "method": "Chrome screenshots of Centro app",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "entries": [
+    {
+      "title": "Chat",
+      "route": "/apps/chat",
+      "filename": "app-chat.png"
+    },
+    {
+      "title": "Email",
+      "route": "/apps/email",
+      "filename": "app-email.png"
+    },
+    {
+      "title": "Calendar",
+      "route": "/apps/calendar",
+      "filename": "app-calendar.png"
+    },
+    {
+      "title": "Tasks",
+      "route": "/apps/tasks",
+      "filename": "app-tasks.png"
+    },
+    {
+      "title": "Kanban",
+      "route": "/apps/kanban",
+      "filename": "app-kanban.png"
+    },
+    {
+      "title": "Files",
+      "route": "/apps/files",
+      "filename": "app-files.png"
+    },
+    {
+      "title": "AI Chat",
+      "route": "/apps/ai-chat",
+      "filename": "app-ai-chat-v2.png"
+    },
+    {
+      "title": "Notes",
+      "route": "/apps/notes",
+      "filename": "app-notes-v2.png"
+    }
+  ]
+}

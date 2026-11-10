@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Centro is a modern React 19, TypeScript and Tailwind CSS v4 admin dashboard template for SaaS, eCommerce, CRM, analytics and business applications. Explore responsive layouts, reusable components and dark/light themes." />
+    <meta name="keywords" content="react admin dashboard, react dashboard template, react admin template, tailwind css admin dashboard, tailwind dashboard template, react 19 admin template, typescript admin dashboard, vite admin template, saas dashboard, ecommerce dashboard, crm dashboard, analytics dashboard, responsive admin template, dark mode dashboard, admin panel template" />
+    <title>Getting Started | Centro Documentation</title>
+    <link rel="icon" href="assets/logos/logo-icon.png" />
+    <link rel="stylesheet" href="css/style.css?v=1.0.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/advanced.css?v=1.0.0-icons">
+</head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html"
+        ><img src="assets/logos/logo-light.png" alt="Centro" /><small>v1.0.0 Documentation</small></a
+      >
+      <div class="header-actions">
+       <a class="button" href="http://localhost:3000/" target="_blank" rel="noreferrer">Live Preview</a
+        ><a class="button primary" href="support.html">Support</a
+        ><button class="button menu-toggle" type="button" aria-label="Open documentation menu">
+          Menu
+        </button>
+      </div>
+    </header>
+    <div class="overlay"></div>
+    <div class="shell">
+      <aside class="sidebar">
+        <input
+          class="search"
+          type="search"
+          placeholder="Search documentation"
+          aria-label="Search documentation"
+        />
+        <div class="nav-group">
+          <h3>Introduction</h3>
+          <a class="nav-link" href="index.html" data-keywords="overview version stack">Overview</a
+          ><a
+            class="nav-link active"
+            href="getting-started.html"
+            data-keywords="requirements node npm quick start"
+            >Getting Started</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Setup</h3>
+          <a class="nav-link" href="installation.html" data-keywords="install dev build deploy"
+            >Installation</a
+          ><a class="nav-link" href="folder-structure.html" data-keywords="folders source routes"
+            >Project Structure</a
+          ><a class="nav-link" href="dependencies.html" data-keywords="packages npm react vite"
+            >Dependencies</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Customize</h3><a class="nav-link" href="customization.html#rtl-ltr" data-keywords="rtl ltr direction right left layout">RTL / LTR</a>
+          <a
+            class="nav-link"
+            href="customization.html"
+            data-keywords="logo favicon theme sidebar route avatar"
+            >Customization Guide</a
+          ><a class="nav-link" href="colors.html" data-keywords="colors primary skin dark mode css"
+            >Colors & Theme</a
+          ><a class="nav-link" href="layout.html" data-keywords="layout sidebar header navigation"
+            >Layouts & Navigation</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Reference</h3>
+          <a
+            class="nav-link"
+            href="components.html"
+            data-keywords="button alert badge modal tabs form table chart toast"
+            >Components</a
+          ><a
+            class="nav-link"
+            href="pages.html"
+            data-keywords="dashboards apps ecommerce crm pages auth"
+            >Pages</a
+          ><a
+            class="nav-link"
+            href="faq.html"
+            data-keywords="help logo installation theme avatar build"
+            >FAQ</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Help</h3>
+          <a class="nav-link" href="changelog.html" data-keywords="release version changes"
+            >Changelog</a
+          ><a class="nav-link" href="support.html" data-keywords="support bug issue customization"
+            >Support</a
+          >
+        </div>
+        <p class="search-empty">No matching documentation items.</p>
+      </aside>
+      <main class="content">
+        <p class="eyebrow">Introduction</p>
+        <h1>Getting Started</h1>
+        <p class="lead">
+          Set up the project locally using the package scripts supplied with this repository.
+        </p>
+        <h2>Requirements</h2>
+        <ul>
+          <li>A current Node.js LTS release is recommended.</li>
+          <li>npm is used by the included package scripts.</li>
+          <li>A modern browser for local development.</li>
+        </ul>
+        <div class="callout info">
+          <strong>Project stack</strong>React 19, TanStack Start/Router, Vite, Tailwind CSS 4, Radix
+          UI primitives, ApexCharts, and lucide-react.
+        </div>
+        <h2>Start the project</h2>
+        <ol class="steps">
+          <li>Extract the purchased package and open its root directory in your editor.</li>
+          <li>Install project dependencies.</li>
+          <li>Run the development server and open the local URL Vite displays.</li>
+        </ol>
+        <div class="code-wrap">
+          <button class="copy">Copy</button>
+          <pre><code>npm install
+npm run dev</code></pre>
+        </div>
+        <h2>Build for production</h2>
+        <div class="code-wrap">
+          <button class="copy">Copy</button>
+          <pre><code>npm run build
+npm run preview</code></pre>
+        </div>
+        <p>
+          The production build is created by the repository's Vite build script. See
+          <a href="installation.html">Installation</a> for deployment basics.
+        </p>
+        
+      <h2>Sample data and persistence</h2><div class="docs-table"><table><thead><tr><th>Area</th><th>Behavior</th></tr></thead><tbody><tr><td>Appearance</td><td>Customizer settings persist in browser localStorage; reset restores defaults.</td></tr><tr><td>New workspaces</td><td>Edits, approvals, bookings, assignments, notes, and demo processing generally live in component state and reset when a page is remounted or reloaded.</td></tr><tr><td>Separate pages</td><td>New workspaces do not share a backend. A doctor booking does not update the separate Appointments page; bed assignment does not update admissions.</td></tr><tr><td>Exports</td><td>Exports download files through the browser. They do not write to a server or trigger payment/dispatch.</td></tr></tbody></table></div>
+<h2>Windows</h2><p>If PowerShell blocks npm scripts, use <code>npm.cmd</code> and <code>npx.cmd</code> with the same arguments.</p>
+<h2>Explore version 1.0.0</h2><p>Start with the AI Analytics, Hospital, School, HRM, Logistics, Crypto, LMS, and Restaurant POS dashboards. Open Management for their related workspaces, or Apps for AI Chat and Notes. Use <a href="pages.html">Included Pages</a> to search all routes.</p><p class="footer-note">Centro customer documentation Version 1.0.0 Standalone HTML documentation</p></main>
+    </div>
+    <button class="to-top" type="button" aria-label="Back to top"></button>
+    <script src="js/main.js?v=1.0.0-icons"></script>
+  </body>
+</html>

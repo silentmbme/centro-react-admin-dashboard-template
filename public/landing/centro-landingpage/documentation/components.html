@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Centro is a modern React 19, TypeScript and Tailwind CSS v4 admin dashboard template for SaaS, eCommerce, CRM, analytics and business applications. Explore responsive layouts, reusable components and dark/light themes." />
+    <meta name="keywords" content="react admin dashboard, react dashboard template, react admin template, tailwind css admin dashboard, tailwind dashboard template, react 19 admin template, typescript admin dashboard, vite admin template, saas dashboard, ecommerce dashboard, crm dashboard, analytics dashboard, responsive admin template, dark mode dashboard, admin panel template" />
+    <title>Components | Centro Documentation</title>
+    <link rel="icon" href="assets/logos/logo-icon.png" />
+    <link rel="stylesheet" href="css/style.css?v=1.0.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/advanced.css?v=1.0.0-icons">
+</head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html"
+        ><img src="assets/logos/logo-light.png" alt="Centro" /><small>v1.0.0 Documentation</small></a
+      >
+      <div class="header-actions">
+       <a class="button" href="http://localhost:3000/" target="_blank" rel="noreferrer">Live Preview</a
+        ><a class="button primary" href="support.html">Support</a
+        ><button class="button menu-toggle" type="button" aria-label="Open documentation menu">
+          Menu
+        </button>
+      </div>
+    </header>
+    <div class="overlay"></div>
+    <div class="shell">
+      <aside class="sidebar">
+        <input
+          class="search"
+          type="search"
+          placeholder="Search documentation"
+          aria-label="Search documentation"
+        />
+        <div class="nav-group">
+          <h3>Introduction</h3>
+          <a class="nav-link" href="index.html" data-keywords="overview version stack">Overview</a
+          ><a
+            class="nav-link"
+            href="getting-started.html"
+            data-keywords="requirements node npm quick start"
+            >Getting Started</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Setup</h3>
+          <a class="nav-link" href="installation.html" data-keywords="install dev build deploy"
+            >Installation</a
+          ><a class="nav-link" href="folder-structure.html" data-keywords="folders source routes"
+            >Project Structure</a
+          ><a class="nav-link" href="dependencies.html" data-keywords="packages npm react vite"
+            >Dependencies</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Customize</h3><a class="nav-link" href="customization.html#rtl-ltr" data-keywords="rtl ltr direction right left layout">RTL / LTR</a>
+          <a
+            class="nav-link"
+            href="customization.html"
+            data-keywords="logo favicon theme sidebar route avatar"
+            >Customization Guide</a
+          ><a class="nav-link" href="colors.html" data-keywords="colors primary skin dark mode css"
+            >Colors & Theme</a
+          ><a class="nav-link" href="layout.html" data-keywords="layout sidebar header navigation"
+            >Layouts & Navigation</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Reference</h3>
+          <a
+            class="nav-link active"
+            href="components.html"
+            data-keywords="button alert badge modal tabs form table chart toast"
+            >Components</a
+          ><a
+            class="nav-link"
+            href="pages.html"
+            data-keywords="dashboards apps ecommerce crm pages auth"
+            >Pages</a
+          ><a
+            class="nav-link"
+            href="faq.html"
+            data-keywords="help logo installation theme avatar build"
+            >FAQ</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Help</h3>
+          <a class="nav-link" href="changelog.html" data-keywords="release version changes"
+            >Changelog</a
+          ><a class="nav-link" href="support.html" data-keywords="support bug issue customization"
+            >Support</a
+          >
+        </div>
+        <p class="search-empty">No matching documentation items.</p>
+      </aside>
+      <main class="content">
+        <p class="eyebrow">Reference</p>
+        <h1>Components</h1>
+        <p class="lead">
+          Reusable UI primitives are located under <code>src/components/ui/</code>. They use the
+          existing Radix UI and Tailwind conventions.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Related file</th>
+              <th>Use</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Buttons, alerts, badges</td>
+              <td><code>button.tsx</code>, <code>alert.tsx</code>, <code>badge.tsx</code></td>
+              <td>Actions and status messaging.</td>
+            </tr>
+            <tr>
+              <td>Cards, avatars, progress</td>
+              <td><code>card.tsx</code>, <code>avatar.tsx</code>, <code>progress.tsx</code></td>
+              <td>Content, identities, and status.</td>
+            </tr>
+            <tr>
+              <td>Dropdowns, dialogs, drawers</td>
+              <td>
+                <code>dropdown-menu.tsx</code>, <code>dialog.tsx</code>, <code>drawer.tsx</code>
+              </td>
+              <td>Context actions and layered flows.</td>
+            </tr>
+            <tr>
+              <td>Tabs, accordion, tooltip</td>
+              <td><code>tabs.tsx</code>, <code>accordion.tsx</code>, <code>tooltip.tsx</code></td>
+              <td>Organize information.</td>
+            </tr>
+            <tr>
+              <td>Pagination, breadcrumbs, table</td>
+              <td>
+                <code>pagination.tsx</code>, <code>breadcrumb.tsx</code>, <code>table.tsx</code>
+              </td>
+              <td>Navigation and tabular content.</td>
+            </tr>
+            <tr>
+              <td>Forms and controls</td>
+              <td><code>form.tsx</code>, <code>input.tsx</code>, <code>select.tsx</code></td>
+              <td>Accessible forms.</td>
+            </tr>
+            <tr>
+              <td>Toasts</td>
+              <td><code>sonner.tsx</code></td>
+              <td>Transient feedback.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Example pattern</h2>
+        <div class="code-wrap">
+          <button class="copy">Copy</button>
+          <pre><code>import { Button } from "@/components/ui/button";
+
+export function SaveAction() {
+  return &lt;Button&gt;Save changes&lt;/Button&gt;;
+}</code></pre>
+        </div>
+        <div class="callout info">
+          <strong>Charts</strong>Use <code>src/components/charts/ApexChart.tsx</code> with
+          <code>src/lib/chart-config.ts</code>.
+        </div>
+        
+      <h2>Forms and state</h2><p>New workspaces use React state and browser form validation, with additional checks for duplicate email, date ranges, overlapping requests, numeric limits, and duplicate appointments. Dedicated pages add review notes, activity logs, transfers, and undo where implemented. Do not treat UI state as authoritative server validation.</p>
+<h2>Connect a backend</h2><ul><li>Replace fixed arrays and component state with authenticated API reads and writes.</li><li>Validate permissions, record identity, dates, and conflicts on the server.</li><li>Define shared domain state when pages must reflect each other’s updates.</li><li>Add loading, failure, retry, empty, and concurrent-edit behavior.</li><li>Implement payments, dispatch, messages, AI inference, or file processing only through explicit service integrations.</li></ul>
+<h2>Exports</h2><p>Current CSV, JSON, and transcript exports create browser downloads. Validate and harden exported fields for your production data, especially values beginning with spreadsheet formula characters.</p>
+<h2>Dedicated workspace components</h2><p>HospitalPages, HrmPages, and SchoolPages dispatch enhanced views to DoctorsPage, WardsPage, EmployeesPage, LeaveRequestsPage, and AttendancePage. AI Analytics uses dedicated insight, conversation, prediction, and model settings components. Reuse existing UI primitives for consistent dialogs, filtering, empty states, and accessible controls.</p><p class="footer-note">Centro customer documentation Version 1.0.0 Standalone HTML documentation</p></main>
+    </div>
+    <button class="to-top" type="button" aria-label="Back to top">&#8593;</button>
+    <script src="js/main.js?v=1.0.0-icons"></script>
+  </body>
+</html>

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Centro is a modern React 19, TypeScript and Tailwind CSS v4 admin dashboard template for SaaS, eCommerce, CRM, analytics and business applications. Explore responsive layouts, reusable components and dark/light themes." />
+    <meta name="keywords" content="react admin dashboard, react dashboard template, react admin template, tailwind css admin dashboard, tailwind dashboard template, react 19 admin template, typescript admin dashboard, vite admin template, saas dashboard, ecommerce dashboard, crm dashboard, analytics dashboard, responsive admin template, dark mode dashboard, admin panel template" />
+    <title>Dependencies | Centro Documentation</title>
+    <link rel="icon" href="assets/logos/logo-icon.png" />
+    <link rel="stylesheet" href="css/style.css?v=1.0.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/advanced.css?v=1.0.0-icons">
+</head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html"
+        ><img src="assets/logos/logo-light.png" alt="Centro" /><small>v1.0.0 Documentation</small></a
+      >
+      <div class="header-actions">
+       <a class="button" href="http://localhost:3000/" target="_blank" rel="noreferrer">Live Preview</a
+        ><a class="button primary" href="support.html">Support</a
+        ><button class="button menu-toggle" type="button" aria-label="Open documentation menu">
+          Menu
+        </button>
+      </div>
+    </header>
+    <div class="overlay"></div>
+    <div class="shell">
+      <aside class="sidebar">
+        <input
+          class="search"
+          type="search"
+          placeholder="Search documentation"
+          aria-label="Search documentation"
+        />
+        <div class="nav-group">
+          <h3>Introduction</h3>
+          <a class="nav-link" href="index.html" data-keywords="overview version stack">Overview</a
+          ><a
+            class="nav-link"
+            href="getting-started.html"
+            data-keywords="requirements node npm quick start"
+            >Getting Started</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Setup</h3>
+          <a class="nav-link" href="installation.html" data-keywords="install dev build deploy"
+            >Installation</a
+          ><a class="nav-link" href="folder-structure.html" data-keywords="folders source routes"
+            >Project Structure</a
+          ><a class="nav-link active" href="dependencies.html" data-keywords="packages npm react vite"
+            >Dependencies</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Customize</h3><a class="nav-link" href="customization.html#rtl-ltr" data-keywords="rtl ltr direction right left layout">RTL / LTR</a>
+          <a
+            class="nav-link"
+            href="customization.html"
+            data-keywords="logo favicon theme sidebar route avatar"
+            >Customization Guide</a
+          ><a class="nav-link" href="colors.html" data-keywords="colors primary skin dark mode css"
+            >Colors & Theme</a
+          ><a class="nav-link" href="layout.html" data-keywords="layout sidebar header navigation"
+            >Layouts & Navigation</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Reference</h3>
+          <a
+            class="nav-link"
+            href="components.html"
+            data-keywords="button alert badge modal tabs form table chart toast"
+            >Components</a
+          ><a
+            class="nav-link"
+            href="pages.html"
+            data-keywords="dashboards apps ecommerce crm pages auth"
+            >Pages</a
+          ><a
+            class="nav-link"
+            href="faq.html"
+            data-keywords="help logo installation theme avatar build"
+            >FAQ</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Help</h3>
+          <a class="nav-link" href="changelog.html" data-keywords="release version changes"
+            >Changelog</a
+          ><a class="nav-link" href="support.html" data-keywords="support bug issue customization"
+            >Support</a
+          >
+        </div>
+        <p class="search-empty">No matching documentation items.</p>
+      </aside>
+      <main class="content">
+        <p class="eyebrow">Setup</p>
+        <h1>Dependencies</h1>
+        <p class="lead">Versions below are taken directly from <code>package.json</code>.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Package</th>
+              <th>Version</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>react / react-dom</td>
+              <td>^19.2.0</td>
+              <td>Application UI runtime.</td>
+            </tr>
+            <tr>
+              <td>@tanstack/react-router</td>
+              <td>1.170.18</td>
+              <td>Application routing.</td>
+            </tr>
+            <tr>
+              <td>@tanstack/react-start</td>
+              <td>1.168.32</td>
+              <td>App framework and server integration.</td>
+            </tr>
+            <tr>
+              <td>vite</td>
+              <td>8.1.5</td>
+              <td>Development server and build.</td>
+            </tr>
+            <tr>
+              <td>tailwindcss</td>
+              <td>^4.2.1</td>
+              <td>Utility CSS and theme integration.</td>
+            </tr>
+            <tr>
+              <td>apexcharts / react-apexcharts</td>
+              <td>^6.10.0 / ^2.1.1</td>
+              <td>Dashboard charts.</td>
+            </tr>
+            <tr>
+              <td>lucide-react</td>
+              <td>^0.575.0</td>
+              <td>Icons.</td>
+            </tr>
+            <tr>
+              <td>@radix-ui/react packages</td>
+              <td>See package.json</td>
+              <td>Accessible UI primitives.</td>
+            </tr>
+            <tr>
+              <td>react-hook-form / zod</td>
+              <td>^7.71.2 / ^3.24.2</td>
+              <td>Forms and schema validation.</td>
+            </tr>
+            <tr>
+              <td>sonner</td>
+              <td>^2.0.7</td>
+              <td>Toast notifications.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Browser Support</h2>
+        <p>
+          Centro targets current Chrome, Edge, Firefox, and Safari on desktop and mobile. Keep
+          browsers updated for modern CSS, JavaScript, React, and Vite output support.
+        </p>
+        <div class="callout warning">
+          <strong>Updating packages</strong>Review release notes and test the complete build before
+          changing dependencies.
+        </div>
+        
+      <h2>Complete dependency specifications</h2><p>The tables below are generated from the current package.json, including development dependencies and overrides.</p><h2>dependencies</h2><div class="docs-table"><table><thead><tr><th>Package</th><th>Declared specification</th></tr></thead><tbody><tr><td>@hookform/resolvers</td><td><code>^5.2.2</code></td></tr><tr><td>@radix-ui/react-accordion</td><td><code>^1.2.12</code></td></tr><tr><td>@radix-ui/react-alert-dialog</td><td><code>^1.1.15</code></td></tr><tr><td>@radix-ui/react-aspect-ratio</td><td><code>^1.1.8</code></td></tr><tr><td>@radix-ui/react-avatar</td><td><code>^1.1.11</code></td></tr><tr><td>@radix-ui/react-checkbox</td><td><code>^1.3.3</code></td></tr><tr><td>@radix-ui/react-collapsible</td><td><code>^1.1.12</code></td></tr><tr><td>@radix-ui/react-context-menu</td><td><code>^2.2.16</code></td></tr><tr><td>@radix-ui/react-dialog</td><td><code>^1.1.15</code></td></tr><tr><td>@radix-ui/react-direction</td><td><code>^1.1.4</code></td></tr><tr><td>@radix-ui/react-dropdown-menu</td><td><code>^2.1.16</code></td></tr><tr><td>@radix-ui/react-hover-card</td><td><code>^1.1.15</code></td></tr><tr><td>@radix-ui/react-label</td><td><code>^2.1.8</code></td></tr><tr><td>@radix-ui/react-menubar</td><td><code>^1.1.16</code></td></tr><tr><td>@radix-ui/react-navigation-menu</td><td><code>^1.2.14</code></td></tr><tr><td>@radix-ui/react-popover</td><td><code>^1.1.15</code></td></tr><tr><td>@radix-ui/react-progress</td><td><code>^1.1.8</code></td></tr><tr><td>@radix-ui/react-radio-group</td><td><code>^1.3.8</code></td></tr><tr><td>@radix-ui/react-scroll-area</td><td><code>^1.2.10</code></td></tr><tr><td>@radix-ui/react-select</td><td><code>^2.2.6</code></td></tr><tr><td>@radix-ui/react-separator</td><td><code>^1.1.8</code></td></tr><tr><td>@radix-ui/react-slider</td><td><code>^1.3.6</code></td></tr><tr><td>@radix-ui/react-slot</td><td><code>^1.2.4</code></td></tr><tr><td>@radix-ui/react-switch</td><td><code>^1.2.6</code></td></tr><tr><td>@radix-ui/react-tabs</td><td><code>^1.1.13</code></td></tr><tr><td>@radix-ui/react-toggle</td><td><code>^1.1.10</code></td></tr><tr><td>@radix-ui/react-toggle-group</td><td><code>^1.1.11</code></td></tr><tr><td>@radix-ui/react-tooltip</td><td><code>^1.2.8</code></td></tr><tr><td>@tailwindcss/vite</td><td><code>^4.2.1</code></td></tr><tr><td>@tanstack/react-query</td><td><code>^5.101.1</code></td></tr><tr><td>@tanstack/react-router</td><td><code>1.170.18</code></td></tr><tr><td>@tanstack/react-start</td><td><code>1.168.32</code></td></tr><tr><td>@tanstack/router-plugin</td><td><code>1.168.23</code></td></tr><tr><td>apexcharts</td><td><code>^6.10.0</code></td></tr><tr><td>class-variance-authority</td><td><code>^0.7.1</code></td></tr><tr><td>clsx</td><td><code>^2.1.1</code></td></tr><tr><td>cmdk</td><td><code>^1.1.1</code></td></tr><tr><td>date-fns</td><td><code>^4.1.0</code></td></tr><tr><td>embla-carousel-react</td><td><code>^8.6.0</code></td></tr><tr><td>input-otp</td><td><code>^1.4.2</code></td></tr><tr><td>lucide-react</td><td><code>^0.575.0</code></td></tr><tr><td>react</td><td><code>^19.2.0</code></td></tr><tr><td>react-apexcharts</td><td><code>^2.1.1</code></td></tr><tr><td>react-day-picker</td><td><code>^9.14.0</code></td></tr><tr><td>react-dom</td><td><code>^19.2.0</code></td></tr><tr><td>react-hook-form</td><td><code>^7.71.2</code></td></tr><tr><td>react-resizable-panels</td><td><code>^4.6.5</code></td></tr><tr><td>recharts</td><td><code>^3.10.1</code></td></tr><tr><td>sonner</td><td><code>^2.0.7</code></td></tr><tr><td>tailwind-merge</td><td><code>^3.5.0</code></td></tr><tr><td>tailwindcss</td><td><code>^4.2.1</code></td></tr><tr><td>tw-animate-css</td><td><code>^1.3.4</code></td></tr><tr><td>vaul</td><td><code>^1.1.2</code></td></tr><tr><td>zod</td><td><code>^3.24.2</code></td></tr></tbody></table></div><h2>devDependencies</h2><div class="docs-table"><table><thead><tr><th>Package</th><th>Declared specification</th></tr></thead><tbody><tr><td>@eslint/js</td><td><code>^10.0.1</code></td></tr><tr><td>@types/node</td><td><code>^22.16.5</code></td></tr><tr><td>@types/react</td><td><code>^19.2.0</code></td></tr><tr><td>@types/react-dom</td><td><code>^19.2.0</code></td></tr><tr><td>@vitejs/plugin-react</td><td><code>^5.2.0</code></td></tr><tr><td>eslint</td><td><code>^10.10.0</code></td></tr><tr><td>eslint-config-prettier</td><td><code>^10.1.1</code></td></tr><tr><td>eslint-plugin-prettier</td><td><code>^5.2.6</code></td></tr><tr><td>eslint-plugin-react-hooks</td><td><code>^7.1.1</code></td></tr><tr><td>eslint-plugin-react-refresh</td><td><code>^0.4.20</code></td></tr><tr><td>globals</td><td><code>^15.15.0</code></td></tr><tr><td>nitro</td><td><code>3.0.260603-beta</code></td></tr><tr><td>prettier</td><td><code>^3.9.6</code></td></tr><tr><td>typescript</td><td><code>^5.8.3</code></td></tr><tr><td>typescript-eslint</td><td><code>^8.70.0</code></td></tr><tr><td>vite</td><td><code>8.1.5</code></td></tr></tbody></table></div><h2>overrides</h2><div class="docs-table"><table><thead><tr><th>Package</th><th>Declared specification</th></tr></thead><tbody><tr><td>rolldown</td><td><code>1.2.1</code></td></tr></tbody></table></div><p class="footer-note">Centro customer documentation Version 1.0.0 Standalone HTML documentation</p></main>
+    </div>
+    <button class="to-top" type="button" aria-label="Back to top">&#8593;</button>
+    <script src="js/main.js?v=1.0.0-icons"></script>
+  </body>
+</html>

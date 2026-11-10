@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Centro is a modern React 19, TypeScript and Tailwind CSS v4 admin dashboard template for SaaS, eCommerce, CRM, analytics and business applications. Explore responsive layouts, reusable components and dark/light themes." />
+    <meta name="keywords" content="react admin dashboard, react dashboard template, react admin template, tailwind css admin dashboard, tailwind dashboard template, react 19 admin template, typescript admin dashboard, vite admin template, saas dashboard, ecommerce dashboard, crm dashboard, analytics dashboard, responsive admin template, dark mode dashboard, admin panel template" />
+    <title>Installation | Centro Documentation</title>
+    <link rel="icon" href="assets/logos/logo-icon.png" />
+    <link rel="stylesheet" href="css/style.css?v=1.0.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/advanced.css?v=1.0.0-icons">
+</head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html"
+        ><img src="assets/logos/logo-light.png" alt="Centro" /><small>v1.0.0 Documentation</small></a
+      >
+      <div class="header-actions">
+       <a class="button" href="http://localhost:3000/" target="_blank" rel="noreferrer">Live Preview</a
+        ><a class="button primary" href="support.html">Support</a
+        ><button class="button menu-toggle" type="button" aria-label="Open documentation menu">
+          Menu
+        </button>
+      </div>
+    </header>
+    <div class="overlay"></div>
+    <div class="shell">
+      <aside class="sidebar">
+        <input
+          class="search"
+          type="search"
+          placeholder="Search documentation"
+          aria-label="Search documentation"
+        />
+        <div class="nav-group">
+          <h3>Introduction</h3>
+          <a class="nav-link" href="index.html" data-keywords="overview version stack">Overview</a
+          ><a
+            class="nav-link"
+            href="getting-started.html"
+            data-keywords="requirements node npm quick start"
+            >Getting Started</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Setup</h3>
+          <a class="nav-link active" href="installation.html" data-keywords="install dev build deploy"
+            >Installation</a
+          ><a class="nav-link" href="folder-structure.html" data-keywords="folders source routes"
+            >Project Structure</a
+          ><a class="nav-link" href="dependencies.html" data-keywords="packages npm react vite"
+            >Dependencies</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Customize</h3><a class="nav-link" href="customization.html#rtl-ltr" data-keywords="rtl ltr direction right left layout">RTL / LTR</a>
+          <a
+            class="nav-link"
+            href="customization.html"
+            data-keywords="logo favicon theme sidebar route avatar"
+            >Customization Guide</a
+          ><a class="nav-link" href="colors.html" data-keywords="colors primary skin dark mode css"
+            >Colors & Theme</a
+          ><a class="nav-link" href="layout.html" data-keywords="layout sidebar header navigation"
+            >Layouts & Navigation</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Reference</h3>
+          <a
+            class="nav-link"
+            href="components.html"
+            data-keywords="button alert badge modal tabs form table chart toast"
+            >Components</a
+          ><a
+            class="nav-link"
+            href="pages.html"
+            data-keywords="dashboards apps ecommerce crm pages auth"
+            >Pages</a
+          ><a
+            class="nav-link"
+            href="faq.html"
+            data-keywords="help logo installation theme avatar build"
+            >FAQ</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Help</h3>
+          <a class="nav-link" href="changelog.html" data-keywords="release version changes"
+            >Changelog</a
+          ><a class="nav-link" href="support.html" data-keywords="support bug issue customization"
+            >Support</a
+          >
+        </div>
+        <p class="search-empty">No matching documentation items.</p>
+      </aside>
+      <main class="content">
+        <p class="eyebrow">Setup</p>
+        <h1>Installation</h1>
+        <p class="lead">
+          A dependable six-step workflow for installing, running, building, and deploying Centro.
+        </p>
+        <ol class="steps">
+          <li>
+            <strong>Extract the package.</strong><br />Unzip the purchased archive to a local
+            workspace.
+          </li>
+          <li>
+            <strong>Open the project folder.</strong><br />Open the folder containing
+            <code>package.json</code>.
+          </li>
+          <li>
+            <strong>Install dependencies.</strong><br />Run <code>npm ci</code> with the included lockfile from the
+            project root.
+          </li>
+          <li><strong>Start local development.</strong><br />Run <code>npm run dev</code>.</li>
+          <li><strong>Create a production build.</strong><br />Run <code>npm run build</code>.</li>
+          <li>
+            <strong>Preview or deploy.</strong><br />Use <code>npm run preview</code> locally, then
+            deploy the generated production output according to your hosting platform.
+          </li>
+        </ol>
+        <div class="code-wrap">
+          <button class="copy">Copy</button>
+          <pre><code>npm install
+npm run dev
+npm run build
+npm run preview</code></pre>
+        </div>
+        <div class="callout warning">
+          <strong>Important</strong>Run commands from the directory that contains
+          <code>package.json</code>. Do not edit generated build output as a source of truth.
+        </div>
+        <h2>Additional scripts</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Command</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>npm run build:dev</code></td>
+              <td>Creates a build using development mode.</td>
+            </tr>
+            <tr>
+              <td><code>npm run lint</code></td>
+              <td>Runs the project ESLint command.</td>
+            </tr>
+            <tr>
+              <td><code>npm run format</code></td>
+              <td>Formats files with Prettier.</td>
+            </tr>
+          <tr><td><code>npm run docs:build</code></td><td>Updates both standalone documentation copies.</td></tr><tr><td><code>npm run docs:check</code></td><td>Checks documentation links and consistency.</td></tr><tr><td><code>npm run test:direction</code></td><td>Checks saved LTR/RTL settings behavior.</td></tr></tbody>
+        </table>
+        
+      <h2>Cloudflare integration</h2><ul><li>Confirm the generated Worker entry, assets directory, and Cloudflare configuration emitted by the installed Nitro version.</li><li>Configure environment bindings and secrets in your deployment environment when you add backend integrations. No production AI, payment, hospital, or HR service is configured by these demo pages.</li><li>Serve the generated public assets, including <code>/documentation/</code>, alongside the app.</li><li>Test deep links, legacy redirects, SSR error behavior, dark mode, and RTL after deployment.</li></ul>
+<h2>Generate both documentation copies</h2><p>Run <code>npm run docs:build</code> after editing the documentation sources. This updates all guides in <code>centro-documentation/</code> and <code>public/documentation/</code> together. Run <code>npm run docs:check</code> before distributing the standalone folder or building the app.</p><p class="footer-note">Centro customer documentation Version 1.0.0 Standalone HTML documentation</p></main>
+    </div>
+    <button class="to-top" type="button" aria-label="Back to top"></button>
+    <script src="js/main.js?v=1.0.0-icons"></script>
+  </body>
+</html>

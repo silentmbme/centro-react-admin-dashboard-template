@@ -1,0 +1,54 @@
+﻿/* Included in Centro: product statistics and initial release. */
+.proof-section { padding: 0 0 90px; }
+.proof-section > .container { padding: 40px; border: 1px solid #e0e7f2; border-radius: 24px; background: #f4f7fc; }
+.metrics-heading { display: flex; justify-content: space-between; align-items: end; gap: 32px; margin-bottom: 30px; }
+.metrics-heading .eyebrow { color: #0868f7; font-size: 9px; letter-spacing: .13em; margin-bottom: 14px; }
+.metrics-heading h2 { font-size: 32px; line-height: 1.3; }
+.metrics-heading > p { color: var(--muted); font-size: 12px; line-height: 1.9; padding-bottom: 4px; }
+.centro-metrics { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; padding: 0; border: 0; }
+.centro-metrics .metric-card, .centro-metrics .metric-card:first-child, .centro-metrics .metric-card:nth-child(4) { position: relative; padding: 23px; border: 1px solid #e1e7f1; border-radius: 14px; background: #fff; box-shadow: 0 2px 4px #22395f03, 0 6px 18px #22395f04; overflow: hidden; }
+.metric-card-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 15px; }
+.centro-metrics .metric-category { color: #8290a5; font-size: 9px; font-weight: 500; }
+.metric-symbol { display: inline-flex; justify-content: center; align-items: center; flex-shrink: 0; width: 34px; height: 34px; border-radius: 9px; background: #edf3ff; color: #0868f7 !important; }
+.metric-symbol svg { width: 18px; height: 18px; }
+.metric-skins .metric-symbol { color: #8152d8 !important; background: #f2edff; }
+.metric-dashboards .metric-symbol { color: #0c9e77 !important; background: #e7f8f1; }
+.metric-components .metric-symbol { color: #d98b12 !important; background: #fff5e2; }
+.metric-applications .metric-symbol { color: #009ec0 !important; background: #e7f9fc; }
+.metric-appearance .metric-symbol { color: #cb588e !important; background: #fcedf4; }
+.metric-value { display: flex; align-items: baseline; gap: 12px; }
+.centro-metrics .metric-value strong { color: #1d293d; font-size: 43px; font-weight: 650; line-height: 1.1; letter-spacing: -.06em; }
+.centro-metrics .metric-value > span { font-size: 12px; color: #394b67; font-weight: 600; }
+.metric-card > p { margin-top: 13px; color: #8290a5; font-size: 10px; line-height: 1.8; }
+.metric-swatches, .metric-modes { display: flex; gap: 6px; margin-top: 17px; height: 15px; align-items: center; }
+.metric-swatches i { width: 12px; height: 12px; border-radius: 50%; background: #0868f7; box-shadow: 0 0 0 2px white, 0 0 0 3px #e8edf5; margin-right: 3px; }
+.metric-swatches i:nth-child(2) { background: #13ad85; } .metric-swatches i:nth-child(3) { background: #8758e5; } .metric-swatches i:nth-child(4) { background: #ec5a8e; } .metric-swatches i:nth-child(5) { background: #f59e0b; } .metric-swatches i:nth-child(6) { background: #10b5d3; } .metric-swatches i:nth-child(7) { background: #596579; }
+.centro-metrics .metric-modes span { color: #738097; font-size: 8px; line-height: 1; border: 1px solid #e3e8f0; border-radius: 4px; padding: 4px 7px; background: #f8faff; }
+.centro-metrics .metric-modes span:nth-child(2) { color: #dae6f9; background: #23334e; border-color: #23334e; }
+.metrics-footer { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-top: 24px; }
+.metrics-footer .metrics-caption { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; color: #738097; margin: 0; font-size: 10px; text-align: left; }
+.metric-release-dot { width: 6px; height: 6px; border-radius: 100%; background: #14ac83; }
+.metric-version { display: inline-block; border: 1px solid #d4e1f7; background: #eaf1ff; border-radius: 5px; padding: 3px 7px; color: #0868f7; font-size: 9px; font-weight: 600; }
+.metrics-footer > a { color: #0868f7; font-size: 11px; font-weight: 600; white-space: nowrap; }
+.metrics-footer > a span { margin-left: 6px; }
+.metrics-footer > a:hover { text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 1000px) { .proof-section > .container { padding: 28px; } .metrics-heading h2 { font-size: 28px; } .centro-metrics .metric-card { padding: 20px; } .metric-value { gap: 9px; } .centro-metrics .metric-value > span { font-size: 11px; } }
+@media (max-width: 760px) {
+ .proof-section { padding-bottom: 60px; } .proof-section > .container { padding: 25px; border-radius: 18px; }
+ .metrics-heading { display: block; margin-bottom: 24px; } .metrics-heading h2 { font-size: 28px; } .metrics-heading > p { margin-top: 15px; font-size: 11px; }
+ .metrics-heading > p br { display: none; } .centro-metrics { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+ .centro-metrics .metric-card, .centro-metrics .metric-card:first-child, .centro-metrics .metric-card:nth-child(4) { padding: 18px; }
+ .metric-value { display: block; } .centro-metrics .metric-value strong { font-size: 36px; } .centro-metrics .metric-value > span { display: block; margin-top: 6px; }
+ .metric-card > p { font-size: 9px; } .metric-card-top { margin-bottom: 16px; } .centro-metrics .metric-category { font-size: 8px; }
+ .metric-symbol { width: 29px; height: 29px; border-radius: 8px; } .metric-symbol svg { width: 16px; height: 16px; }
+ .metrics-footer { flex-direction: column; align-items: start; gap: 16px; }
+}
+@media (max-width: 480px) {
+ .proof-section > .container { padding: 20px; } .metrics-heading h2 { font-size: 25px; }
+ .centro-metrics .metric-card, .centro-metrics .metric-card:first-child, .centro-metrics .metric-card:nth-child(4) { padding: 15px; }
+ .metric-card-top { align-items: start; } .centro-metrics .metric-category { max-width: 65px; line-height: 1.5; }
+ .metric-card > p { font-size: 9px; line-height: 1.7; } .metric-value { margin-top: 6px; }
+ .metric-swatches { gap: 3px; } .metric-swatches i { width: 8px; height: 8px; margin-right: 1px; }
+ .metric-modes { gap: 3px; } .centro-metrics .metric-modes span { padding: 3px 4px; font-size: 7px; }
+ .metrics-footer .metrics-caption { font-size: 9px; }
+}

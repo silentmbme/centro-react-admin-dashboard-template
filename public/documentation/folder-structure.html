@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Centro is a modern React 19, TypeScript and Tailwind CSS v4 admin dashboard template for SaaS, eCommerce, CRM, analytics and business applications. Explore responsive layouts, reusable components and dark/light themes." />
+    <meta name="keywords" content="react admin dashboard, react dashboard template, react admin template, tailwind css admin dashboard, tailwind dashboard template, react 19 admin template, typescript admin dashboard, vite admin template, saas dashboard, ecommerce dashboard, crm dashboard, analytics dashboard, responsive admin template, dark mode dashboard, admin panel template" />
+    <title>Project Structure | Centro Documentation</title>
+    <link rel="icon" href="assets/logos/logo-icon.png" />
+    <link rel="stylesheet" href="css/style.css?v=1.0.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/advanced.css?v=1.0.0-icons">
+</head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html"
+        ><img src="assets/logos/logo-light.png" alt="Centro" /><small>v1.0.0 Documentation</small></a
+      >
+      <div class="header-actions">
+       <a class="button" href="http://localhost:3000/" target="_blank" rel="noreferrer">Live Preview</a
+        ><a class="button primary" href="support.html">Support</a
+        ><button class="button menu-toggle" type="button" aria-label="Open documentation menu">
+          Menu
+        </button>
+      </div>
+    </header>
+    <div class="overlay"></div>
+    <div class="shell">
+      <aside class="sidebar">
+        <input
+          class="search"
+          type="search"
+          placeholder="Search documentation"
+          aria-label="Search documentation"
+        />
+        <div class="nav-group">
+          <h3>Introduction</h3>
+          <a class="nav-link" href="index.html" data-keywords="overview version stack">Overview</a
+          ><a
+            class="nav-link"
+            href="getting-started.html"
+            data-keywords="requirements node npm quick start"
+            >Getting Started</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Setup</h3>
+          <a class="nav-link" href="installation.html" data-keywords="install dev build deploy"
+            >Installation</a
+          ><a class="nav-link active" href="folder-structure.html" data-keywords="folders source routes"
+            >Project Structure</a
+          ><a class="nav-link" href="dependencies.html" data-keywords="packages npm react vite"
+            >Dependencies</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Customize</h3><a class="nav-link" href="customization.html#rtl-ltr" data-keywords="rtl ltr direction right left layout">RTL / LTR</a>
+          <a
+            class="nav-link"
+            href="customization.html"
+            data-keywords="logo favicon theme sidebar route avatar"
+            >Customization Guide</a
+          ><a class="nav-link" href="colors.html" data-keywords="colors primary skin dark mode css"
+            >Colors & Theme</a
+          ><a class="nav-link" href="layout.html" data-keywords="layout sidebar header navigation"
+            >Layouts & Navigation</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Reference</h3>
+          <a
+            class="nav-link"
+            href="components.html"
+            data-keywords="button alert badge modal tabs form table chart toast"
+            >Components</a
+          ><a
+            class="nav-link"
+            href="pages.html"
+            data-keywords="dashboards apps ecommerce crm pages auth"
+            >Pages</a
+          ><a
+            class="nav-link"
+            href="faq.html"
+            data-keywords="help logo installation theme avatar build"
+            >FAQ</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Help</h3>
+          <a class="nav-link" href="changelog.html" data-keywords="release version changes"
+            >Changelog</a
+          ><a class="nav-link" href="support.html" data-keywords="support bug issue customization"
+            >Support</a
+          >
+        </div>
+        <p class="search-empty">No matching documentation items.</p>
+      </aside>
+      <main class="content">
+        <p class="eyebrow">Setup</p>
+        <h1>Project Structure</h1>
+        <p class="lead">
+          Centro uses file-based routes and keeps shared UI, dashboards, data, and assets in focused
+          source folders.
+        </p>
+        <div class="code-wrap">
+          <button class="copy">Copy</button>
+          <pre class="tree"><code>src/
+ assets/
+    images/
+        logos/
+        users/
+ components/
+    auth/        authentication views and forms
+    branding/    shared BrandLogo
+    charts/      ApexCharts wrapper
+    dashboard/   eight dashboard views and widgets
+    layout/      AppShell, Header, Sidebar, Customizer
+    pages/       application page implementations
+    ui/          reusable Radix-based primitives
+ data/            navigation and sample data
+ hooks/            shared React hooks
+ lib/              settings, chart configuration, utilities
+ routes/           file-based TanStack routes
+ styles.css        tokens, skins, base styling</code></pre>
+        </div>
+        <h2>Key folders</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Location</th>
+              <th>Use</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>src/routes/</code></td>
+              <td>Route entry points arranged by URL path.</td>
+            </tr>
+            <tr>
+              <td><code>src/data/navigation.ts</code></td>
+              <td>Sidebar navigation tree and menu destinations.</td>
+            </tr>
+            <tr>
+              <td><code>src/lib/nova-settings.ts</code></td>
+              <td>Persisted theme and layout settings.</td>
+            </tr>
+            <tr>
+              <td><code>src/assets/images/logos/</code></td>
+              <td>Brand logo and favicon source files.</td>
+            </tr>
+            <tr>
+              <td><code>src/assets/images/users/</code></td>
+              <td>Local profile and avatar images.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="callout tip">
+          <strong>Keep it maintainable</strong>Add a view to the appropriate focused component
+          folder, then create its matching entry under <code>src/routes/</code>.
+        </div>
+        
+      <h2>Feature entry points</h2><p>Use the route component to find the page implementation. <code>HospitalPages.tsx</code>, <code>HrmPages.tsx</code>, and <code>SchoolPages.tsx</code> dispatch selected workspaces to dedicated components. Shared hospital catalog data is in <code>src/components/hospital/hospital-page-data.ts</code>.</p>
+<h2>Standalone documentation sources</h2><p><code>centro-documentation/pages.json</code> stores guide content; <code>release.json</code> stores changelog entries; <code>content.cjs</code> provides rendering helpers; <code>template.html</code> supplies the shared layout. The HTML, CSS, JavaScript, and assets in this folder form the standalone copy. The generator also writes the served copy in <code>public/documentation/</code>.</p><p class="footer-note">Centro customer documentation Version 1.0.0 Standalone HTML documentation</p></main>
+    </div>
+    <button class="to-top" type="button" aria-label="Back to top"></button>
+    <script src="js/main.js?v=1.0.0-icons"></script>
+  </body>
+</html>

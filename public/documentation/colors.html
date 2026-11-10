@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Centro is a modern React 19, TypeScript and Tailwind CSS v4 admin dashboard template for SaaS, eCommerce, CRM, analytics and business applications. Explore responsive layouts, reusable components and dark/light themes." />
+    <meta name="keywords" content="react admin dashboard, react dashboard template, react admin template, tailwind css admin dashboard, tailwind dashboard template, react 19 admin template, typescript admin dashboard, vite admin template, saas dashboard, ecommerce dashboard, crm dashboard, analytics dashboard, responsive admin template, dark mode dashboard, admin panel template" />
+    <title>Colors &amp; Theme | Centro Documentation</title>
+    <link rel="icon" href="assets/logos/logo-icon.png" />
+    <link rel="stylesheet" href="css/style.css?v=1.0.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/advanced.css?v=1.0.0-icons">
+</head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html"
+        ><img src="assets/logos/logo-light.png" alt="Centro" /><small>v1.0.0 Documentation</small></a
+      >
+      <div class="header-actions">
+       <a class="button" href="http://localhost:3000/" target="_blank" rel="noreferrer">Live Preview</a
+        ><a class="button primary" href="support.html">Support</a
+        ><button class="button menu-toggle" type="button" aria-label="Open documentation menu">
+          Menu
+        </button>
+      </div>
+    </header>
+    <div class="overlay"></div>
+    <div class="shell">
+      <aside class="sidebar">
+        <input
+          class="search"
+          type="search"
+          placeholder="Search documentation"
+          aria-label="Search documentation"
+        />
+        <div class="nav-group">
+          <h3>Introduction</h3>
+          <a class="nav-link" href="index.html" data-keywords="overview version stack">Overview</a
+          ><a class="nav-link" href="getting-started.html" data-keywords="requirements node npm quick start">Getting Started</a>
+        </div>
+        <div class="nav-group">
+          <h3>Setup</h3>
+          <a class="nav-link" href="installation.html" data-keywords="install dev build deploy">Installation</a
+          ><a class="nav-link" href="folder-structure.html" data-keywords="folders source routes">Project Structure</a
+          ><a class="nav-link" href="dependencies.html" data-keywords="packages npm react vite">Dependencies</a>
+        </div>
+        <div class="nav-group">
+          <h3>Customize</h3><a class="nav-link" href="customization.html#rtl-ltr" data-keywords="rtl ltr direction right left layout">RTL / LTR</a>
+          <a class="nav-link" href="customization.html" data-keywords="logo favicon theme sidebar route avatar">Customization Guide</a
+          ><a class="nav-link active" href="colors.html" data-keywords="colors primary skin dark mode css">Colors & Theme</a
+          ><a class="nav-link" href="layout.html" data-keywords="layout sidebar header navigation">Layouts & Navigation</a>
+        </div>
+        <div class="nav-group">
+          <h3>Reference</h3>
+          <a class="nav-link" href="components.html" data-keywords="button alert badge modal tabs form table chart toast">Components</a
+          ><a class="nav-link" href="pages.html" data-keywords="dashboards apps ecommerce crm pages auth">Pages</a
+          ><a class="nav-link" href="faq.html" data-keywords="help logo installation theme avatar build">FAQ</a>
+        </div>
+        <div class="nav-group">
+          <h3>Help</h3>
+          <a class="nav-link" href="changelog.html" data-keywords="release version changes">Changelog</a
+          ><a class="nav-link" href="support.html" data-keywords="support bug issue customization">Support</a>
+        </div>
+        <p class="search-empty">No matching documentation items.</p>
+      </aside>
+      <main class="content">
+        <p class="eyebrow">Customize</p>
+        <h1>Colors & Theme</h1>
+        <p class="lead">
+          Centro uses semantic CSS variables and persisted settings rather than hard-coded component
+          colors.
+        </p>
+        <h2>Where theme settings live</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>File</th>
+              <th>Responsibility</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>src/styles.css</code></td>
+              <td>
+                OKLCH design tokens, default sapphire accent ramp, light/dark tokens, and named skin
+                ramps.
+              </td>
+            </tr>
+            <tr>
+              <td><code>src/lib/nova-settings.ts</code></td>
+              <td>
+                Theme mode, skin, sidebar, header, width, and collapse state; persisted in local
+                storage as <code>nova-admin-settings</code>.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Default primary color</h2>
+        <p>
+          The default Sapphire skin uses <code>#0868f7</code> for <code>--accent-600</code>.
+          Components use semantic tokens such as <code>bg-primary</code>,
+          <code>text-muted-foreground</code>, and <code>border-border</code>.
+        </p>
+        <div class="code-wrap">
+          <button class="copy">Copy</button>
+          <pre><code>:root {
+  --accent-600: #0868f7;
+  --primary: var(--accent-600);
+  --background: oklch(0.976 0.004 268);
+  --foreground: oklch(0.279 0.031 262);
+}</code></pre>
+        </div>
+        <h2>Supported skin choices</h2>
+        <p>
+          Sapphire, Emerald, Violet, Rose, Orange, Cyan, and Graphite are defined in
+          <code>src/lib/nova-settings.ts</code> and <code>src/styles.css</code>.
+        </p>
+        <h2>Dark mode</h2>
+        <p>
+          The supported modes are <code>light</code>, <code>dark</code>, and <code>system</code>.
+          The setting toggles the <code>.dark</code> class and <code>data-bs-theme</code> on the
+          document root. Use existing semantic variables so new UI automatically follows each mode.
+        </p>
+        <div class="callout tip">
+          <strong>Tip</strong>Prefer semantic tokens over a literal hex color in component markup so
+          skin switching continues to work.
+        </div>
+        
+      <h2>Widget and status palettes</h2><p>Use semantic success, warning, info, destructive, and primary tones for distinct summary cards and icon backgrounds. Keep chart series consistent with the selected skin, and distinguish multiple series with labels, line styles, or shades. Verify hover tooltips and legend contrast in both light and dark modes.</p><p class="footer-note">Centro customer documentation Version 1.0.0 Standalone HTML documentation</p></main>
+    </div>
+    <button class="to-top" type="button" aria-label="Back to top"></button>
+    <script src="js/main.js?v=1.0.0-icons"></script>
+  </body>
+</html>

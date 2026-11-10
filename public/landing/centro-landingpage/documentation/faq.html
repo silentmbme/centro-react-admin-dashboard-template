@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Centro is a modern React 19, TypeScript and Tailwind CSS v4 admin dashboard template for SaaS, eCommerce, CRM, analytics and business applications. Explore responsive layouts, reusable components and dark/light themes." />
+    <meta name="keywords" content="react admin dashboard, react dashboard template, react admin template, tailwind css admin dashboard, tailwind dashboard template, react 19 admin template, typescript admin dashboard, vite admin template, saas dashboard, ecommerce dashboard, crm dashboard, analytics dashboard, responsive admin template, dark mode dashboard, admin panel template" />
+    <title>Frequently Asked Questions | Centro Documentation</title>
+    <link rel="icon" href="assets/logos/logo-icon.png" />
+    <link rel="stylesheet" href="css/style.css?v=1.0.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/advanced.css?v=1.0.0-icons">
+</head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html"
+        ><img src="assets/logos/logo-light.png" alt="Centro" /><small>v1.0.0 Documentation</small></a
+      >
+      <div class="header-actions">
+       <a class="button" href="http://localhost:3000/" target="_blank" rel="noreferrer">Live Preview</a
+        ><a class="button primary" href="support.html">Support</a
+        ><button class="button menu-toggle" type="button" aria-label="Open documentation menu">
+          Menu
+        </button>
+      </div>
+    </header>
+    <div class="overlay"></div>
+    <div class="shell">
+      <aside class="sidebar">
+        <input
+          class="search"
+          type="search"
+          placeholder="Search documentation"
+          aria-label="Search documentation"
+        />
+        <div class="nav-group">
+          <h3>Introduction</h3>
+          <a class="nav-link" href="index.html" data-keywords="overview version stack">Overview</a
+          ><a
+            class="nav-link"
+            href="getting-started.html"
+            data-keywords="requirements node npm quick start"
+            >Getting Started</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Setup</h3>
+          <a class="nav-link" href="installation.html" data-keywords="install dev build deploy"
+            >Installation</a
+          ><a class="nav-link" href="folder-structure.html" data-keywords="folders source routes"
+            >Project Structure</a
+          ><a class="nav-link" href="dependencies.html" data-keywords="packages npm react vite"
+            >Dependencies</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Customize</h3><a class="nav-link" href="customization.html#rtl-ltr" data-keywords="rtl ltr direction right left layout">RTL / LTR</a>
+          <a
+            class="nav-link"
+            href="customization.html"
+            data-keywords="logo favicon theme sidebar route avatar"
+            >Customization Guide</a
+          ><a class="nav-link" href="colors.html" data-keywords="colors primary skin dark mode css"
+            >Colors & Theme</a
+          ><a class="nav-link" href="layout.html" data-keywords="layout sidebar header navigation"
+            >Layouts & Navigation</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Reference</h3>
+          <a
+            class="nav-link"
+            href="components.html"
+            data-keywords="button alert badge modal tabs form table chart toast"
+            >Components</a
+          ><a
+            class="nav-link"
+            href="pages.html"
+            data-keywords="dashboards apps ecommerce crm pages auth"
+            >Pages</a
+          ><a
+            class="nav-link active"
+            href="faq.html"
+            data-keywords="help logo installation theme avatar build"
+            >FAQ</a
+          >
+        </div>
+        <div class="nav-group">
+          <h3>Help</h3>
+          <a class="nav-link" href="changelog.html" data-keywords="release version changes"
+            >Changelog</a
+          ><a class="nav-link" href="support.html" data-keywords="support bug issue customization"
+            >Support</a
+          >
+        </div>
+        <p class="search-empty">No matching documentation items.</p>
+      </aside>
+      <main class="content">
+        <p class="eyebrow">Help</p>
+        <h1>Frequently Asked Questions</h1>
+        <p class="lead">
+          Practical answers for the most common customer setup and customization tasks.
+        </p>
+        <h2>How do I change the logo?</h2>
+        <p>
+          Replace the appropriate files in <code>src/assets/images/logos/</code>. Use full variants
+          for expanded branding and icon variants for collapsed/minimal locations. Update the static
+          public favicon copies too.
+        </p>
+        <h2>How do I change theme colors?</h2>
+        <p>
+          Edit the accent ramps and semantic tokens in <code>src/styles.css</code>. Skin options and
+          defaults are managed in <code>src/lib/nova-settings.ts</code>.
+        </p>
+        <h2>How do I enable dark mode?</h2>
+        <p>
+          Use the built-in Customizer or set the mode in the Nova settings store. The current
+          implementation supports light, dark, and system modes.
+        </p>
+        <h2>How do I add a new page?</h2>
+        <p>
+          Create a route file under <code>src/routes/</code>, then add the item to
+          <code>src/data/navigation.ts</code> when it belongs in the sidebar.
+        </p>
+        <h2>How do I replace user avatars?</h2>
+        <p>
+          Replace local files in <code>src/assets/images/users/</code> while retaining their names,
+          or update the shared image mapping where a new filename is required.
+        </p>
+        <h2>Where are images stored?</h2>
+        <p>
+          Brand assets are in <code>src/assets/images/logos/</code>; user images are in
+          <code>src/assets/images/users/</code>.
+        </p>
+        <h2>How do I create a production build?</h2>
+        <div class="code-wrap">
+          <button class="copy">Copy</button>
+          <pre><code>npm run build</code></pre>
+        </div>
+        <h2>Why is npm install failing?</h2>
+        <p>
+          Check the active Node.js version, confirm your network or registry access, delete only the
+          install artifacts if necessary, then retry from the folder containing
+          <code>package.json</code>.
+        </p>
+        <h2>How do I update dependencies?</h2>
+        <p>
+          Review the package release notes, update <code>package.json</code> deliberately, run
+          <code>npm install</code>, and test <code>npm run build</code> before deployment.
+        </p>
+        
+      <h2>Why did my edit disappear?</h2><p>Most new page records are stored in component state and reset when the page is remounted. Customizer settings persist in browser storage. Add a backend or a deliberate persistence layer for business records.</p>
+<h2>Why does a booking not appear on another page?</h2><p>Doctor booking, Appointments, Wards, Patients, and other demo workspaces have independent local state. They demonstrate UI workflows without a shared hospital or HR system.</p>
+<h2>Does AI Chat call a model?</h2><p>No. It uses local sample responses. Attachments stay in the conversation and are not analyzed or uploaded. Voice input depends on the browser SpeechRecognition API.</p>
+<h2>This page did not load</h2><ul><li>Check the development terminal and browser console for the original exception.</li><li>Verify route imports and component paths; avoid placing state-dependent JSX at module scope.</li><li>Keep <code>src/lib/centro-settings.ts</code> compatibility imports available.</li><li>Restart the development server if its module graph is stale after file moves.</li><li>Run the build, then verify the affected route and controls in a browser.</li></ul>
+<h2>Voice input unavailable</h2><p>Speech recognition is browser-dependent. The feature shows a fallback when unsupported. Browser microphone permission and connection requirements may affect availability. No backend speech service is implemented here.</p><p class="footer-note">Centro customer documentation Version 1.0.0 Standalone HTML documentation</p></main>
+    </div>
+    <button class="to-top" type="button" aria-label="Back to top">&#8593;</button>
+    <script src="js/main.js?v=1.0.0-icons"></script>
+  </body>
+</html>

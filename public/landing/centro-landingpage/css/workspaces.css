@@ -1,0 +1,30 @@
+﻿/* Simple workspace directory, using Centro card surfaces. */
+.management-collection { padding-block: 80px; background: #f7f9fd; border-block: 1px solid #e5ebf5; }
+.management-collection .section-intro { max-width: 680px; margin-bottom: 32px; }
+.management-collection .eyebrow { color: #0868f7; font-size: 9px; letter-spacing: .13em; margin-bottom: 15px; }
+.management-collection h2 { font-size: 35px; line-height: 1.3; }
+.management-collection .section-intro > p { max-width: 540px; color: #738097; font-size: 12px; line-height: 1.9; margin-top: 15px; }
+.management-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 23px; align-items: start; }
+.management-grid .management-feature { padding: 25px; background: #fff; border: 1px solid #e0e7f1; border-radius: 13px; box-shadow: 0 2px 3px #23365302, 0 6px 18px #23365304; }
+.management-feature h3 { color: #263750; font-size: 17px; font-weight: 650; letter-spacing: -.025em; margin: 0 0 19px; padding-right: 65px; }
+.management-feature .management-count { float: right; margin: 0; padding: 4px 8px; color: #5478ad; font-size: 9px; font-weight: 500; line-height: 1.6; border: 1px solid #dde8fb; background: #f1f6ff; border-radius: 5px; }
+.management-feature > div { border-top: 1px solid #e9edf5; padding-top: 9px; }
+.management-feature a { display: flex; justify-content: space-between; align-items: center; gap: 15px; color: #708098; font-size: 12px; line-height: 1.6; padding: 10px 0; border: 0; }
+.management-feature a:last-child { border-bottom: 0; padding-bottom: 0; }
+.management-feature a span { color: #a2afc2; font-size: 13px; }
+.management-feature a:hover, .management-feature a:hover span { color: #0868f7; }
+.management-feature a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.management-note { margin-top: 25px; color: #8794a8; font-size: 10px; line-height: 1.9; max-width: 860px; }
+@media (max-width: 1050px) { .management-grid .management-feature { padding: 22px; } .management-feature h3 { font-size: 16px; } }
+@media (max-width: 760px) {
+ .management-collection { padding-block: 55px; } .management-collection h2 { font-size: 29px; }
+ .management-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+ .management-grid .management-feature { padding: 22px; } .management-feature a { font-size: 11px; }
+ .management-feature h3 { font-size: 16px; padding-right: 0; margin-top: 36px; }
+ .management-feature .management-count { float: none; display: inline-block; }
+}
+@media (max-width: 480px) {
+ .management-grid { grid-template-columns: 1fr; gap: 17px; }
+ .management-feature h3 { margin-top: 0; padding-right: 65px; font-size: 17px; }
+ .management-feature .management-count { float: right; } .management-feature a { font-size: 12px; }
+}

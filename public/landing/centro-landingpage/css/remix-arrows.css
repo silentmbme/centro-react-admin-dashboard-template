@@ -1,0 +1,8 @@
+﻿/* Inline official Remix SVGs work over HTTP and when opened directly from disk. */
+svg.remix-arrow { display: inline-block; width: 1em; height: 1em; min-width: 1em; flex: 0 0 auto; vertical-align: -.12em; fill: currentColor; stroke: none; overflow: visible; }
+.button > svg.remix-arrow { width: 18px; height: 18px; }
+.feature-grid a > svg.remix-arrow, .text-link > svg.remix-arrow, #hero-preview-link > svg.remix-arrow { margin-left: 5px; }
+.all-dashboard-card h3::after { content: none; }
+
+svg.remix-arrow { display:inline-block; width:1em; height:1em; min-width:1em; vertical-align:-.12em; fill:currentColor; stroke:none; flex-shrink:0; }
+svg.remix-arrow-reverse { transform:rotate(180deg); }

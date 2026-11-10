@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Centro is a modern React 19, TypeScript and Tailwind CSS v4 admin dashboard template for SaaS, eCommerce, CRM, analytics and business applications. Explore responsive layouts, reusable components and dark/light themes." />
+    <meta name="keywords" content="react admin dashboard, react dashboard template, react admin template, tailwind css admin dashboard, tailwind dashboard template, react 19 admin template, typescript admin dashboard, vite admin template, saas dashboard, ecommerce dashboard, crm dashboard, analytics dashboard, responsive admin template, dark mode dashboard, admin panel template" />
+    <title>Layouts &amp; Navigation | Centro Documentation</title>
+    <link rel="icon" href="assets/logos/logo-icon.png" />
+    <link rel="stylesheet" href="css/style.css?v=1.0.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/advanced.css?v=1.0.0-icons">
+</head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html"
+        ><img src="assets/logos/logo-light.png" alt="Centro" /><small>v1.0.0 Documentation</small></a
+      >
+      <div class="header-actions">
+       <a class="button" href="http://localhost:3000/" target="_blank" rel="noreferrer">Live Preview</a
+        ><a class="button primary" href="support.html">Support</a
+        ><button class="button menu-toggle" type="button" aria-label="Open documentation menu">
+          Menu
+        </button>
+      </div>
+    </header>
+    <div class="overlay"></div>
+    <div class="shell">
+      <aside class="sidebar">
+        <input
+          class="search"
+          type="search"
+          placeholder="Search documentation"
+          aria-label="Search documentation"
+        />
+        <div class="nav-group">
+          <h3>Introduction</h3>
+          <a class="nav-link" href="index.html" data-keywords="overview version stack">Overview</a
+          ><a class="nav-link" href="getting-started.html" data-keywords="requirements node npm quick start">Getting Started</a>
+        </div>
+        <div class="nav-group">
+          <h3>Setup</h3>
+          <a class="nav-link" href="installation.html" data-keywords="install dev build deploy">Installation</a
+          ><a class="nav-link" href="folder-structure.html" data-keywords="folders source routes">Project Structure</a
+          ><a class="nav-link" href="dependencies.html" data-keywords="packages npm react vite">Dependencies</a>
+        </div>
+        <div class="nav-group">
+          <h3>Customize</h3><a class="nav-link" href="customization.html#rtl-ltr" data-keywords="rtl ltr direction right left layout">RTL / LTR</a>
+          <a class="nav-link" href="customization.html" data-keywords="logo favicon theme sidebar route avatar">Customization Guide</a
+          ><a class="nav-link" href="colors.html" data-keywords="colors primary skin dark mode css">Colors & Theme</a
+          ><a class="nav-link active" href="layout.html" data-keywords="layout sidebar header navigation">Layouts & Navigation</a>
+        </div>
+        <div class="nav-group">
+          <h3>Reference</h3>
+          <a class="nav-link" href="components.html" data-keywords="button alert badge modal tabs form table chart toast">Components</a
+          ><a class="nav-link" href="pages.html" data-keywords="dashboards apps ecommerce crm pages auth">Pages</a
+          ><a class="nav-link" href="faq.html" data-keywords="help logo installation theme avatar build">FAQ</a>
+        </div>
+        <div class="nav-group">
+          <h3>Help</h3>
+          <a class="nav-link" href="changelog.html" data-keywords="release version changes">Changelog</a
+          ><a class="nav-link" href="support.html" data-keywords="support bug issue customization">Support</a>
+        </div>
+        <p class="search-empty">No matching documentation items.</p>
+      </aside>
+      <main class="content">
+        <p class="eyebrow">Customize</p>
+        <h1>Layouts & Navigation</h1>
+        <p class="lead">
+          The main shell is designed for responsive dashboard workspaces and exposes configurable
+          header, sidebar, and content-width behavior.
+        </p>
+        <h2>Main layout files</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Location</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>src/components/layout/AppShell.tsx</code></td>
+              <td>Combines the application layout, header, sidebar, and main content.</td>
+            </tr>
+            <tr>
+              <td><code>src/components/layout/Sidebar.tsx</code></td>
+              <td>Renders expanded and collapsed navigation including icon-only branding.</td>
+            </tr>
+            <tr>
+              <td><code>src/components/layout/Header.tsx</code></td>
+              <td>
+                Header controls, search, notifications, language/apps/profile controls, and
+                customizer access.
+              </td>
+            </tr>
+            <tr>
+              <td><code>src/data/navigation.ts</code></td>
+              <td>Defines the navigation groups and nested destinations.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Supported layout settings</h2>
+        <div class="grid">
+          <article class="card">
+            <strong>Mode</strong>
+            <p>Light, dark, or system.</p>
+          </article>
+          <article class="card">
+            <strong>Sidebar</strong>
+            <p>Light/dark color, default/compact size, and collapsed state.</p>
+          </article>
+          <article class="card">
+            <strong>Content</strong>
+            <p>Fluid or boxed width plus fixed or static header.</p>
+          </article>
+        </div>
+        <h2>Add a navigation item</h2>
+        <div class="code-wrap">
+          <button class="copy">Copy</button>
+          <pre><code>{ label: "Reports", href: "/reports", icon: "ChartColumn" }</code></pre>
+        </div>
+        <p>
+          Add the item to the correct group in <code>src/data/navigation.ts</code>, then create the
+          corresponding route file under <code>src/routes/</code>.
+        </p>
+        
+      <h2>Routes and aliases</h2><p>Route files use TanStack <code>createFileRoute</code>. Section index routes redirect to the first workspace. Literal dots in file names use <code>[.]</code>, for example <code>doctor-directory[.]html.tsx</code>. Those files redirect old HTML URLs to canonical React routes.</p>
+<h2>Documentation links</h2><p>The app footer and FAQ link to the local <code>/documentation/index.html</code>. Static documentation uses ordinary HTML links and ships in the public assets.</p>
+<h2>Management navigation order</h2><p>Following Projects, the navigation includes Finance, Crypto, AI Analytics, School Management, HRM, and Hospital Management. Their children link to individual workspaces. Keep child links, header search destinations, and legacy redirects aligned when renaming a page.</p><p class="footer-note">Centro customer documentation Version 1.0.0 Standalone HTML documentation</p></main>
+    </div>
+    <button class="to-top" type="button" aria-label="Back to top"></button>
+    <script src="js/main.js?v=1.0.0-icons"></script>
+  </body>
+</html>

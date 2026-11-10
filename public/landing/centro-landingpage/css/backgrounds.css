@@ -1,0 +1,43 @@
+﻿/* Shared background language: sapphire light, fine grids, and soft dot fields. */
+.platform-section, .proof-section, .demos-section, .customize-section, .stack-section, .management-collection, .modules-section, .cta-section, .footer {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+}
+.platform-section > .container, .proof-section > .container, .demos-section > .container, .customize-section > .container, .stack-section > .container, .management-collection > .container, .modules-section > .container, .cta-section > .container, .footer > .container { position: relative; z-index: 1; }
+.platform-section::before, .proof-section::before, .demos-section::before, .customize-section::before, .stack-section::before, .management-collection::before, .modules-section::before, .cta-section::before, .footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.platform-section {
+  background: radial-gradient(ellipse at 0 90%, #e9f2ff 0, transparent 60%), linear-gradient(135deg, #fff, #f9fbff);
+}
+.platform-section::before { background-image: radial-gradient(#86a9da42 .8px, transparent .8px); background-size: 22px 22px; mask-image: linear-gradient(90deg, #0008, transparent 45%, transparent 70%, #0004); }
+.proof-section { background: linear-gradient(#f9fbff, #fff); }
+.proof-section::before { background-image: linear-gradient(#b2c9eb18 1px, transparent 1px), linear-gradient(90deg, #b2c9eb18 1px, transparent 1px); background-size: 64px 64px; mask-image: linear-gradient(90deg, #000, transparent 30%, transparent 70%, #000); }
+.proof-section > .container { background: radial-gradient(ellipse at 95% 0, #e6efff, transparent 62%), linear-gradient(135deg, #f6f9ff, #eff4fc); box-shadow: 0 12px 36px #284c7f05; }
+.demos-section {
+  background: radial-gradient(ellipse at 100% 0, #e5efff90, transparent 30%), radial-gradient(ellipse at 0 95%, #e9f1fd, transparent 30%), #f5f7fc;
+}
+.demos-section::before { background-image: linear-gradient(#8faeda15 1px, transparent 1px), linear-gradient(90deg, #8faeda15 1px, transparent 1px); background-size: 72px 72px; mask-image: linear-gradient(90deg, #000, transparent 27%, transparent 73%, #000); }
+.customize-section { background: radial-gradient(ellipse at 85% 40%, #d9e9ff 0, transparent 62%), linear-gradient(110deg, #eef5ff, #f5f9ff 50%, #eaf2ff); }
+.customize-section::before { background-image: radial-gradient(#689ce345 .8px, transparent .8px); background-size: 20px 20px; mask-image: linear-gradient(90deg, #0006, transparent 45%, #0008); }
+.customize-stage { box-shadow: 0 15px 40px #224e8e0a; }
+.stack-section { background: radial-gradient(ellipse at 0 10%, #ecf6ffb3, transparent 47%), radial-gradient(ellipse at 100% 90%, #edf0ff90, transparent 45%), #fff; }
+.stack-section::before { background-image: linear-gradient(135deg, transparent 48.8%, #aac2e221 49.5%, #aac2e221 50.5%, transparent 51.2%); background-size: 14px 14px; mask-image: linear-gradient(90deg, transparent 75%, #0008); }
+.stack-tech-card, .stack-foundation { box-shadow: 0 5px 18px #25446e04; }
+.management-collection { background: radial-gradient(ellipse at 5% 85%, #e7efff 0, transparent 55%), linear-gradient(120deg, #f7faff, #f1f5fc); }
+.management-collection::before { background-image: radial-gradient(#7a9bcd36 .8px, transparent .8px); background-size: 24px 24px; mask-image: linear-gradient(90deg, #0006, transparent 35%, transparent 65%, #0008); }
+.modules-section { background: radial-gradient(ellipse at 100% 0, #e3edff 0, transparent 40%), linear-gradient(135deg, #f7f9fd, #eff4fc); }
+.modules-section::before { background-image: linear-gradient(#97b5df18 1px, transparent 1px), linear-gradient(90deg, #97b5df18 1px, transparent 1px); background-size: 72px 72px; mask-image: linear-gradient(90deg, #0008, transparent 30%, transparent 70%, #000); }
+.cta-section { background: radial-gradient(ellipse at 0 55%, #e7f1ff90 0, transparent 55%), #fff; }
+.cta-section::before { background-image: radial-gradient(#94b2db40 .7px, transparent .7px); background-size: 20px 20px; mask-image: linear-gradient(90deg, #000, transparent 25%, transparent 80%, #0005); }
+.footer { background: radial-gradient(ellipse at 90% 100%, #17355e 0, transparent 65%), linear-gradient(110deg, #0e1d34, #13263f); }
+.footer::before { background-image: radial-gradient(#91b8eb24 .7px, transparent .7px); background-size: 22px 22px; mask-image: linear-gradient(90deg, transparent 25%, #0005); }
+@media (max-width: 760px) {
+ .platform-section::before, .demos-section::before, .customize-section::before, .management-collection::before, .modules-section::before, .cta-section::before { opacity: .65; }
+ .stack-section::before { opacity: .4; }
+}

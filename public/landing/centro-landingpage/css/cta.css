@@ -1,0 +1,28 @@
+﻿/* A focused closing invitation in Centro sapphire. */
+.cta-section { padding-block: 75px; background: #fff; }
+.final-cta { position: relative; isolation: isolate; overflow: hidden; padding: 54px 58px; border: 1px solid #244e89; border-radius: 24px; background: radial-gradient(ellipse at 100% 10%, #1b65c678, transparent 65%), linear-gradient(110deg, #102446, #123f7d); box-shadow: 0 12px 32px #1c3f7012; }
+.final-cta::after { content: ""; position: absolute; z-index: -1; pointer-events: none; width: 560px; height: 560px; border: 1px solid #b6d3ff16; border-radius: 50%; top: -250px; right: -140px; box-shadow: 0 0 0 60px #9cc2ff04, 0 0 0 61px #b6d3ff12, 0 0 0 125px #9cc2ff03, 0 0 0 126px #b6d3ff0b; }
+.cta-grid { position: absolute; z-index: -1; inset: 0; pointer-events: none; background-image: linear-gradient(#b3d5ff08 1px, transparent 1px), linear-gradient(90deg, #b3d5ff08 1px, transparent 1px); background-size: 42px 42px; mask-image: linear-gradient(90deg, transparent 15%, #000); }
+.cta-content { position: relative; display: grid; grid-template-columns: 1.25fr .8fr; gap: 0 50px; align-items: start; padding: 0; border: 0; }
+.cta-kicker { display: inline-flex; align-items: center; gap: 9px; grid-column: 1; color: #abc9ef; font-size: 9px; font-weight: 600; letter-spacing: .14em; margin-bottom: 22px; }
+.cta-kicker i { width: 6px; height: 6px; border-radius: 50%; background: #77b8ff; box-shadow: 0 0 0 4px #7bb7ff14; }
+.cta-content h2 { grid-column: 1; font-size: 45px; line-height: 1.2; font-weight: 650; color: #f5f9ff; letter-spacing: -.045em; }
+.cta-content h2 > span { color: #84bcff; }
+.cta-content > p { grid-column: 1; max-width: 440px; color: #b2c9e8; font-size: 12px; line-height: 1.9; margin-top: 22px; }
+.cta-buttons { grid-column: 2; grid-row: 1 / span 3; align-self: center; justify-self: end; display: flex; flex-direction: column; gap: 11px; width: min(100%,260px); }
+.cta-buttons .button { width: 100%; justify-content: center; min-height: 49px; border-radius: 8px; font-size: 12px; font-weight: 650; }
+.cta-buttons .primary { background: #fff; color: #175bb6; border-color: #fff; box-shadow: 0 5px 15px #00000012; }
+.cta-buttons .primary:hover { background: #ecf4ff; border-color: #ecf4ff; }
+.cta-buttons .cta-secondary { background: #ffffff08; border-color: #a8c7f050; color: #e5efff; }
+.cta-buttons .cta-secondary:hover { background: #ffffff16; border-color: #a8c7f08a; }
+.cta-doc-link { display: inline-flex; justify-content: center; gap: 10px; align-items: center; font-size: 10px; color: #a7c6ed; margin-top: 7px; }
+.cta-doc-link:hover { color: #fff; text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 1000px) { .final-cta { padding: 45px; } .cta-content { column-gap: 35px; } .cta-content h2 { font-size: 39px; } }
+@media (max-width: 760px) {
+ .cta-section { padding-block: 55px; } .final-cta { padding: 35px; border-radius: 20px; }
+ .cta-content { grid-template-columns: 1fr; gap: 0; } .cta-content h2 { font-size: 36px; }
+ .cta-kicker { margin-bottom: 20px; } .cta-content > p { font-size: 12px; margin-top: 18px; max-width: 440px; }
+ .cta-buttons { grid-column: 1; grid-row: auto; justify-self: start; width: 100%; max-width: 360px; margin-top: 29px; }
+ .cta-buttons .button { min-height: 47px; } .final-cta::after { top: -150px; right: -400px; }
+}
+@media (max-width: 480px) { .final-cta { padding: 30px 25px; border-radius: 17px; } .cta-content h2 { font-size: 33px; } .cta-content > p { font-size: 11px; } .cta-kicker { font-size: 8px; } }
