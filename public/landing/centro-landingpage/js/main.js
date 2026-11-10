@@ -136,7 +136,7 @@
       image.src = `assets/screenshots/${preview.image}`;
       image.alt = preview.alt;
       document.getElementById('hero-preview-name').textContent = preview.name;
-      document.getElementById('hero-preview-link').href = `http://localhost:3000${preview.route}`;
+      document.getElementById('hero-preview-link').href = `${preview.route}`;
       document.querySelectorAll('.hero-preview-tab').forEach((tab) => {
         const active = tab === button;
         tab.classList.toggle('is-active', active);
